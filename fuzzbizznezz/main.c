@@ -70,19 +70,32 @@ int main(int argc, const char * argv[])
     int fuzz = 3;
     int bizz = 5;
     
-    // Prompt user for values.  Note: no error checking implemented.
+    if (argc > 1)
+    {
+        sscanf(argv[1], "%d", &fuzz);
+        
+        if (argc > 1)
+            sscanf(argv[2], "%d", &bizz);
+        
+        if (argc > 2)
+            sscanf(argv[3], "%d", &max);
+        
+    } else {
     
-    printf("What value for FUZZ?");
-    scanf("%d", &fuzz);
-    
-    printf("What value for BIZZ?");
-    scanf("%d", &bizz);
-    
-    printf("What value for NEZZ?");
-    scanf("%d", &max);
-    
-    printf("FUZZ=%d, BIZZ=%d, NEZZ=%d\n", fuzz, bizz, max);
-    
+        // Prompt user for values.  Note: no error checking implemented.
+        
+        printf("What value for FUZZ?");
+        scanf("%d", &fuzz);
+        
+        printf("What value for BIZZ?");
+        scanf("%d", &bizz);
+        
+        printf("What value for NEZZ?");
+        scanf("%d", &max);
+        
+        printf("FUZZ=%d, BIZZ=%d, NEZZ=%d\n", fuzz, bizz, max);
+        
+    }
     // Evaluate and display the appropriate values.
     
     fuzzbizznezz(min, max, fuzz, bizz);
