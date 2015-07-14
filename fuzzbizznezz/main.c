@@ -23,8 +23,7 @@
  
  min - minimum value to evaluate and output.
  
- max - maximum value to evaluate and output.  The user is prompted
-        to enter this value as NEZZ.
+ max - maximum value to evaluate and output.
  
  fuzz - numbers which are multiples of this value will be displayed
         as the text "fuzz".  Numbers which are multiples of this
