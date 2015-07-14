@@ -7,8 +7,16 @@
 //
 
 
+
 #include <stdio.h>
     
+/*
+ fuzzbizznezz - output a range of values, substituting the 
+    words fuzz, bizz, and fuzzbizz for those values which are
+    multiples of the user's input.
+ 
+ 
+*/
 void fuzzbizznezz(int min, int max, int fuzz, int bizz)
 {
     
