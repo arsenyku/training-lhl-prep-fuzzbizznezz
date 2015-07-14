@@ -2,6 +2,10 @@
 //  main.c
 //  fuzzbizznezz
 //
+//  Output a range of values, substituting the
+//  words fuzz, bizz, and fuzzbizz for those values which are
+//  multiples of the user's input.
+//
 //  Created by asu on 2015-07-13.
 //  Copyright (c) 2015 asu. All rights reserved.
 //
@@ -15,6 +19,20 @@
     words fuzz, bizz, and fuzzbizz for those values which are
     multiples of the user's input.
  
+ Parameters:
+ 
+ min - minimum value to evaluate and output.  Default = 1.
+ 
+ max - maximum value to evaluate and output.  The user is prompted
+        to enter this value as NEZZ.  Default = 100.
+ 
+ fuzz - numbers which are multiples of this value will be displayed
+        as the text "fuzz".  Numbers which are multiples of this
+        and the bizz parameter will be displayed as "fuzzbizz".
+ 
+ bizz - numbers which are multiples of this value will be displayed
+        as the text "bizz".  Numbers which are multiples of this
+        and the fuzz parameter will be displayed as "fuzzbizz".
  
 */
 void fuzzbizznezz(int min, int max, int fuzz, int bizz)
@@ -53,6 +71,8 @@ int main(int argc, const char * argv[])
     int fuzz = 3;
     int bizz = 5;
     
+    // Prompt user for values.  Note: no error checking implemented.
+    
     printf("What value for FUZZ?");
     scanf("%d", &fuzz);
     
@@ -63,6 +83,8 @@ int main(int argc, const char * argv[])
     scanf("%d", &max);
     
     printf("FUZZ=%d, BIZZ=%d, NEZZ=%d\n", fuzz, bizz, max);
+    
+    // Evaluate and display the appropriate values.
     
     fuzzbizznezz(min, max, fuzz, bizz);
     
