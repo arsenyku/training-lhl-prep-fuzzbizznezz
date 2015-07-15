@@ -39,22 +39,18 @@ void fuzzbizznezz(int min, int max, int fuzz, int bizz)
     
     for(int i=min; i<=max ; i++){
         
-        char output[9];
-        
         if (i % fuzz == 0 && i % bizz == 0)
-            sprintf(output, "fuzzbizz");
+            printf("fuzzbizz\n");
         
         else if (i % fuzz == 0)
-            sprintf(output, "fuzz");
+            printf("fuzz\n");
         
         else if (i % bizz == 0)
-            sprintf(output, "bizz");
+            printf("bizz\n");
         
         else
-            sprintf(output, "%d", i);
+            printf("%d\n", i);
         
-        
-        printf ("%s\n", output);
     }
     
 }
